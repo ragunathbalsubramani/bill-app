@@ -1,14 +1,15 @@
 .side-bar {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #0799FA;
     box-shadow: 0.2px -1px 5px 0.2px rgb(182, 182, 182);
+    position: sticky;
 }
 .menu-container {
     width: 100%;
     height: 70px;
     display: flex;
-    line-height: 69px;
+    justify-content: center;
 }
 .options {
     width: 70%;
@@ -16,13 +17,6 @@
     color: #ffffff;
     text-align: center;
     line-height: 70px;
-}
-.ham-menu-container {
-    width: 30%;
-    height: 70px;
-    font-size: 20px;
-    text-align: center;
-	color: #ffffff;
 }
 .option-items {
 	margin-left: 20px;

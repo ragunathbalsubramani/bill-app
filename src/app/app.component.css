@@ -8,6 +8,11 @@ p {
 }
 .menu-container{
   width: 300px;
+  height: 100vh;
+  position: fixed;
+}
+.content-box{
+      margin-left: 300px;
 }
 
 @media only screen and (max-width: 1400px) {
