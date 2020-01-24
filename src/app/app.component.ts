@@ -11,31 +11,25 @@ export class AppComponent  {
 
 ngOnInit(){
 
-  if(window.innerWidth<=1400 && window.innerWidth>1200){
-    this.contentboxWidth = window.innerWidth - 250;
-  }else if(window.innerWidth<=1200 && window.innerWidth>900){
-    this.contentboxWidth = window.innerWidth - 200;
-  }else if(window.innerWidth<=900 && window.innerWidth>768){
-    this.contentboxWidth = window.innerWidth - 150;
-  }else if(window.innerWidth<=768){
+  let divWidth = document.getElementById('menu-container').offsetWidth;
+
+  if(window.innerWidth<=768){
     this.contentboxWidth = window.innerWidth;
   }else{
-       this.contentboxWidth = window.innerWidth - 300;
+       this.contentboxWidth = window.innerWidth - divWidth;
   }
 }
  
 onResize(event) {
-    var getBodyWidth = event.target.innerWidth;
-    if(getBodyWidth<=1400 && getBodyWidth>1200){
-      this.contentboxWidth = window.innerWidth - 250;
-    }else if(getBodyWidth<=1200 && getBodyWidth>900){
-      this.contentboxWidth = window.innerWidth - 200;
-    }else if(getBodyWidth<=900 && getBodyWidth>768){
-      this.contentboxWidth = window.innerWidth - 150;
-    }else if(getBodyWidth<=768){
+  let divWidth = document.getElementById('menu-container').offsetWidth;
+  let getBodyWidth = event.target.innerWidth;
+
+    if(getBodyWidth<=768){
           this.contentboxWidth = window.innerWidth;
     }else{
-      this.contentboxWidth = window.innerWidth - 300;
+      this.contentboxWidth = window.innerWidth - divWidth;
     }
+
+    console.log(divWidth);
 }
 }
