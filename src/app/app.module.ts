@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { NewBillComponent } from './new-bill/new-bill.component';
+import { CreateBillComponent } from './create-bill/create-bill.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule],
-  declarations: [ AppComponent, HeaderComponent, SideMenuComponent, NewBillComponent ],
+  declarations: [ AppComponent, HeaderComponent, SideMenuComponent, NewBillComponent, CreateBillComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

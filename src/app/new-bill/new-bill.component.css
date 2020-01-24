@@ -12,7 +12,7 @@
   margin-top: 20px;
 }
 .new-bill-btn{
-	width: 250px;
+	width: 20%;
 	height: 40px;
 	text-align: center;
 	line-height: 40px;
@@ -40,5 +40,46 @@
  .start-img{
   width: 600px;
   margin: 150px auto;
+}
+}
+
+@media only screen and (max-width: 1400px) {
+ .index-cont{
+   width: 800px;
+ }
+ .start-img{
+  width: 500px;
+  margin: 50px auto;
+}
+}
+
+@media only screen and (max-width: 1050px) {
+ .index-cont{
+   width: 600px;
+ }
+ .start-img{
+  width: 500px;
+  margin: 50px auto;
+}
+}
+
+@media only screen and (max-width: 900px) {
+ .index-cont{
+   width: 550px;
+ }
+ .start-img{
+  width: 450px;
+  margin: 50px auto;
+}
+}
+
+@media only screen and (max-width: 768px) {
+ .index-cont{
+   width: 90%;
+   margin: auto;
+ }
+ .start-img{
+  width: 80%;
+  margin: 50px auto;
 }
 }

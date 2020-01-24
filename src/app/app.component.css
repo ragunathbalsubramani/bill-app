@@ -19,4 +19,38 @@ p {
   .menu-container{
   width: 250px;
 }
+.content-box{
+      margin-left: 250px;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  .menu-container{
+  width: 200px;
+}
+.content-box{
+      margin-left: 200px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+  .menu-container{
+  width: 150px;
+}
+.content-box{
+      margin-left: 150px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-container{
+  width: 150px;
+  left: -150px;
+}
+.content-box{
+      margin-left: 0px;
+}
+.content-box{
+  width: 100%;
+}
 }
