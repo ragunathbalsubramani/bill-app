@@ -1,6 +1,6 @@
 <section class="bill-create-section">
   <form class="bill-val-frm">
-    <input class="bill-val-frm-inp" type="text" name="pdt-name" placeholder="Product Name">
+    <input class="bill-val-frm-inp" type="text" name="pdt-name" placeholder="Product Name" (keyup)="selectProduct($event)">
     <input class="bill-val-frm-inp" type="text" name="pdt-id" placeholder="Product ID">
     <input class="bill-val-frm-inp" type="text" name="pdt-qty" placeholder="Quantity">
     <input class="bill-val-frm-btn" type="button" value="ADD">

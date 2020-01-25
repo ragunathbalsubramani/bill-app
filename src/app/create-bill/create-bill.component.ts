@@ -58,10 +58,24 @@ export class CreateBillComponent implements OnInit {
         int:"kg",
     }
   ]
+  matchItems=[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectProduct(event) {
+      this.matchItems = [];
+      let getValue = event.target.value;
+    for(let i=0;i<this.items.length;i++){
+      let shortVal = this.items[i].name.slice(0,getValue.length);
+      if(getValue == shortVal){
+        if(getValue != ""){
+        this.matchItems.push(this.items[i]);
+      }
+      }
+    }
   }
 
 }
