@@ -13,10 +13,39 @@
 .bill-val-frm-inp{
   width: 23%;
   height: 38px;
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px solid rgb(187, 187, 187);
   font-size: 16px;
   padding-left: 2%;
+}
+.pdt-name-container{
+  width: 23%;
+  height: 38px;
+}
+.pdt-name{
+  width:90%;
+  padding-left: 10%;
+}
+.pdt-search-container{
+  width: 100%;
+  height: auto;
+  border-right: 1px solid #c4c4c4;
+  border-left: 1px solid #c4c4c4;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.pdt-search-list{
+  width: 90%;
+  height: 30px;
+  border-bottom: 1px solid #c4c4c4;
+  line-height: 30px;
+  padding-left: 10%;
+  color: #949393;
+  cursor: pointer;
+}
+.pdt-search-list:hover{
+  background-color: #c4c4c4;
+  color: #fff;
 }
 .bill-val-frm-btn{
   width: 20%;
@@ -25,6 +54,7 @@
   background-color: #0799FA;
   color: #fff;
   font-size: 16px;
+  border: none;
 }
 .new-bill{
   width: 100%;

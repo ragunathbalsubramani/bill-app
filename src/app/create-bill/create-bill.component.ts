@@ -78,4 +78,8 @@ export class CreateBillComponent implements OnInit {
     }
   }
 
+  selectItem(i){
+     document.getElementById('pdt-name').nodevalue = this.matchItems[i].name;
+  }
+
 }

@@ -29,7 +29,5 @@ onResize(event) {
     }else{
       this.contentboxWidth = window.innerWidth - divWidth;
     }
-
-    console.log(divWidth);
 }
 }
