@@ -59,6 +59,7 @@ export class CreateBillComponent implements OnInit {
     }
   ]
   matchItems=[];
+  newList=[1];
 
   constructor() { }
 
@@ -79,7 +80,14 @@ export class CreateBillComponent implements OnInit {
   }
 
   selectItem(i){
-     document.getElementById('pdt-name').nodevalue = this.matchItems[i].name;
+     document.getElementById('pdt-name').value = this.matchItems[i].name;
+     document.getElementById('pdt-id').value = this.matchItems[i].id;
+     document.getElementById('pdt-qty').focus();
+     this.matchItems = [];
+  }
+
+  addList(){
+
   }
 
 }

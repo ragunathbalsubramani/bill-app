@@ -2,16 +2,16 @@
   <form class="bill-val-frm">
     <div class="pdt-name-container">
         <input class="bill-val-frm-inp pdt-name" type="text" name="pdt-name" id="pdt-name" placeholder="Product Name" (keyup)="selectProduct($event)">
-        <div class="pdt-search-container" *ngIf="matchItems.length;let i = index">
-            <div class="pdt-search-list" *ngFor="let items of matchItems" (click)="selectItem(i)">{{items.name}}</div>
+        <div class="pdt-search-container" *ngIf="matchItems.length">
+            <div class="pdt-search-list" *ngFor="let items of matchItems;let i = index" (click)="selectItem(i)">{{items.name}}</div>
         </div>
     </div>
-    <input class="bill-val-frm-inp" type="text" name="pdt-id" placeholder="Product ID">
-    <input class="bill-val-frm-inp" type="text" name="pdt-qty" placeholder="Quantity">
-    <input class="bill-val-frm-btn" type="button" value="ADD">
+    <input class="bill-val-frm-inp" id="pdt-id" type="text" name="pdt-id" placeholder="Product ID">
+    <input class="bill-val-frm-inp" id="pdt-qty" type="text" name="pdt-qty" placeholder="Quantity">
+    <input class="bill-val-frm-btn" type="button" value="ADD" (click)="addList">
   </form>
 </section>
-<section class="new-bill">
+<section class="new-bill" *ngIf="newList.length">
     <hr/>
     <table class="bill-list-tbl">
       <tr class="bill-list-item">
