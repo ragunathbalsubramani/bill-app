@@ -1,19 +1,19 @@
 <section class="bill-create-section">
   <form class="bill-val-frm">
     <div class="pdt-name-container">
-        <input class="bill-val-frm-inp pdt-name" type="text" name="pdt-name" id="pdt-name" placeholder="Product Name" (keyup)="selectProduct($event)">
+        <input class="bill-val-frm-inp pdt-name font" type="text" name="pdt-name" id="pdt-name" placeholder="Product Name" (keyup)="selectProduct($event)">
         <div class="pdt-search-container" *ngIf="matchItems.length">
             <div class="pdt-search-list" *ngFor="let items of matchItems;let i = index" (click)="selectItem(i)">{{items.name}}</div>
         </div>
     </div>
-    <input class="bill-val-frm-inp" id="pdt-id" type="text" name="pdt-id" placeholder="Product ID">
-    <input class="bill-val-frm-inp" id="pdt-qty" type="text" name="pdt-qty" placeholder="Quantity">
-    <input class="bill-val-frm-btn" type="button" value="ADD" (click)="addList">
+    <input class="bill-val-frm-inp font" id="pdt-id" type="text" name="pdt-id" placeholder="Product ID">
+    <input class="bill-val-frm-inp font" id="pdt-qty" type="text" name="pdt-qty" placeholder="Quantity">
+    <input class="bill-val-frm-btn font" type="button" value="ADD" (click)="addList">
   </form>
 </section>
 <section class="new-bill" *ngIf="newList.length">
     <hr/>
-    <table class="bill-list-tbl">
+    <table class="bill-list-tbl font">
       <tr class="bill-list-item">
         <th class="bill-s-no">S.NO</th>
         <th class="bill-p-id">PRD ID</th>
@@ -23,13 +23,13 @@
         <th class="total">TOTAL</th>
       </tr>
     </table>
-    <table class="final-bill-count">
+    <table class="final-bill-count font">
       <tr>
         <td class="final-total">TOTAL</td>
         <td class="final-price">AMT</td>
       </tr>
     </table>
     <div class="payment-btn-holder">
-        <button class="payment-btn">PAYMENT</button>
+        <button class="payment-btn font">PAYMENT</button>
     </div>
 </section>
