@@ -193,4 +193,7 @@ th{
 .font{
   font-size: 10px;
 }
+.bill-list-item{
+  height: 30px;
+}
 }
