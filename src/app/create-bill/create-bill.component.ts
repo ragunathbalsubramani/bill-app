@@ -59,7 +59,9 @@ export class CreateBillComponent implements OnInit {
     }
   ]
   matchItems=[];
-  newList=[1];
+  newList=[];
+  curPdt;
+  curAmt=0;
 
   constructor() { }
 
@@ -87,7 +89,21 @@ export class CreateBillComponent implements OnInit {
   }
 
   addList(){
-
+       let pdtName = document.getElementById('pdt-name').value;
+       let pdtId =  Number(document.getElementById('pdt-id').value);
+       let pdtqty = document.getElementById('pdt-qty').value;
+    if(pdtName != "" && pdtId != 0 && pdtqty!= "") {
+      for(let i=0;i<this.items.length;i++){
+        if(pdtId == this.items[i].id){
+              this.curPdt = this.items[i];
+              this.curPdt.curquality = pdtqty;
+              this.curPdt.curprice = (this.items[i].price*pdtqty).toFixed(2);
+              console.log(typeof(this.curPdt.curprice));
+              this.curAmt = this.curPdt.curprice+this.curAmt;
+              this.newList.push(this.curPdt);
+        }
+      }
+    }
   }
 
 }

@@ -8,7 +8,7 @@
     </div>
     <input class="bill-val-frm-inp font" id="pdt-id" type="text" name="pdt-id" placeholder="Product ID">
     <input class="bill-val-frm-inp font" id="pdt-qty" type="text" name="pdt-qty" placeholder="Quantity">
-    <input class="bill-val-frm-btn font" type="button" value="ADD" (click)="addList">
+    <input class="bill-val-frm-btn font" type="button" value="ADD" (click)="addList()">
   </form>
 </section>
 <section class="new-bill" *ngIf="newList.length">
@@ -22,11 +22,19 @@
         <th class="bill-price">Price</th>
         <th class="total">Total</th>
       </tr>
+      <tr class="bill-list-item" *ngFor="let pdt of newList;let i =index">
+        <td class="bill-s-no">{{i+1}}</td>
+        <td class="bill-p-id">{{pdt.id}}</td>
+        <td class="bill-p-name">{{pdt.name}}</td>
+        <td class="bill-qnty">{{pdt.curquality}}</td>
+        <td class="bill-price">{{pdt.price}}</td>
+        <td class="total">{{pdt.curprice}}</td>
+      </tr>
     </table>
     <table class="final-bill-count font">
-      <tr>
+      <tr class="final-list-items">
         <td class="final-total">TOTAL</td>
-        <td class="final-price">AMT</td>
+        <td class="final-price">{{curAmt}}</td>
       </tr>
     </table>
     <div class="payment-btn-holder">

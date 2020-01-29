@@ -67,7 +67,7 @@
 }
 .bill-list-tbl{
   width: 95%;
-  margin:40px auto;
+  margin:40px 0px auto;
   border-collapse: collapse;
   border-radius: 5px 5px 0px 0px;
   font-size: 16px;
@@ -81,6 +81,10 @@
 }
 th{
   border: 1px solid rgb(187, 187, 187);
+}
+td{
+  border: 1px solid rgb(187, 187, 187);
+  text-align: center;
 }
 .bill-s-no{
   width: 10%;
@@ -105,13 +109,15 @@ th{
 }
 .final-bill-count{
   width: 95%;
-  margin:20px auto;
   border-collapse: collapse;
   font-size: 16px;
   text-align: center;
 }
+.final-list-items{
+  height: 40px;
+}
 .final-total{
-  width: 85%;
+  width: 81%;
 }
 .final-price{
   width: 15%;
@@ -194,6 +200,9 @@ th{
   font-size: 10px;
 }
 .bill-list-item{
+  height: 30px;
+}
+.final-list-items{
   height: 30px;
 }
 }
