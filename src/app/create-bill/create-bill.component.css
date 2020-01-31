@@ -67,7 +67,7 @@
 }
 .bill-list-tbl{
   width: 95%;
-  margin:40px 0px auto;
+  margin:40px auto 0px;
   border-collapse: collapse;
   border-radius: 5px 5px 0px 0px;
   font-size: 16px;
@@ -109,6 +109,7 @@ td{
 }
 .final-bill-count{
   width: 95%;
+  margin: 0px auto 20px;
   border-collapse: collapse;
   font-size: 16px;
   text-align: center;
@@ -117,7 +118,7 @@ td{
   height: 40px;
 }
 .final-total{
-  width: 81%;
+  width: 83.5%;
 }
 .final-price{
   width: 15%;
