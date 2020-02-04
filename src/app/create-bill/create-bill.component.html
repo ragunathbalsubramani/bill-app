@@ -1,13 +1,16 @@
 <section class="bill-create-section">
   <form class="bill-val-frm">
     <div class="pdt-name-container">
-        <input class="bill-val-frm-inp pdt-name font" type="text" name="pdt-name" id="pdt-name" placeholder="Product Name" (keyup)="selectProduct($event)">
+        <input class="bill-val-frm-inp pdt-name font" type="text" name="pdt-name" id="pdt-name" placeholder="Product Name" [(ngModel)]="pdt_name" (keyup)="selectProduct($event)">
         <div class="pdt-search-container" *ngIf="matchItems.length">
-            <div class="pdt-search-list" *ngFor="let items of matchItems;let i = index" (click)="selectItem(i)">{{items.name}}</div>
+            <input type="text" class="pdt-search-inp">
+            <ul class="pdt-search-list-container">
+            <li class="pdt-search-list" *ngFor="let items of matchItems;let i = index" (click)="selectItem(i)">{{items.name}}</li>
+            </ul>
         </div>
     </div>
-    <input class="bill-val-frm-inp font" id="pdt-id" type="text" name="pdt-id" placeholder="Product ID">
-    <input class="bill-val-frm-inp font" id="pdt-qty" type="text" name="pdt-qty" placeholder="Quantity">
+    <input class="bill-val-frm-inp font" id="pdt-id" type="text" name="pdt-id" placeholder="Product ID" [(ngModel)]="pdt_id">
+    <input class="bill-val-frm-inp font" id="pdt-qty" type="text" name="pdt-qty" placeholder="Quantity" [(ngModel)]="pdt_qty">
     <input class="bill-val-frm-btn font" type="button" value="ADD" (click)="addList()">
   </form>
 </section>

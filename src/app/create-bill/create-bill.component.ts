@@ -57,14 +57,14 @@ export class CreateBillComponent implements OnInit {
         price:12,
         int:"kg",
     }
-  ]
+  ];
+
   matchItems=[];
   newList=[];
-  curPdt={
-    curquality:0,
-    curprice:0
-  };
   curAmt=0;
+  pdt_name;
+  pdt_id;
+  pdt_qty;
 
   constructor() { }
 
@@ -95,15 +95,19 @@ export class CreateBillComponent implements OnInit {
        let pdtName = document.getElementById('pdt-name').value;
        let pdtId =  Number(document.getElementById('pdt-id').value);
        let pdtqty = Number(document.getElementById('pdt-qty').value);
+       let curPdt={
+         curquality:0,
+         curprice:0
+      };
     if(pdtName != "" && pdtId != 0 && pdtqty!= 0) {
       for(let i=0;i<this.items.length;i++){
         if(pdtId == this.items[i].id){
-              Object.assign(this.curPdt,this.items[i]);
-              this.curPdt.curquality = pdtqty;
+              Object.assign(curPdt,this.items[i]);
+              curPdt.curquality = pdtqty;
               var amt = Number(this.items[i].price)*pdtqty;
-              this.curPdt.curprice = Number(amt.toFixed(2));
-              this.curAmt = this.curPdt.curprice+this.curAmt;
-              this.newList.push(this.curPdt);
+              curPdt.curprice = Number(amt.toFixed(2));
+              this.curAmt = curPdt.curprice+this.curAmt;
+              this.newList.push(curPdt);
         }
       }
     }
